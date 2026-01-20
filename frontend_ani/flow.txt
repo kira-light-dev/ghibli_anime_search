@@ -1,0 +1,27 @@
+ghibli-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── AnimeCard.jsx
+│   │   └── FilterBar.jsx (optional)
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Favourites.jsx
+│   ├── context/
+│   │   └── MovieContext.jsx
+│   ├── api/
+│   │   └── ghibliApi.js
+│   ├── css/
+│   │   ├── App.css
+│   │   ├── Navbar.css
+│   │   ├── AnimeCard.css
+│   │   ├── Home.css
+│   │   ├── Favourites.css
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── .gitignore
+├── package.json
+└── vite.config.js (if using Vite)

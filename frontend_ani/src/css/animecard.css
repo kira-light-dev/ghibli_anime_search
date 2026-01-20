@@ -1,0 +1,115 @@
+.anime-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #1b1f27, #12151c);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(79, 195, 247, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.2);
+}
+
+.anime-poster {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.anime-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.anime-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.anime-card:hover .anime-overlay {
+  opacity: 1;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.favorite-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.favorite-btn.active {
+  color: #ff4757;
+}
+
+.anime-info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.anime-info h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+.anime-info p {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.director {
+  font-style: italic;
+  color: #a8dadc;
+}
+
+@media (max-width: 768px) {
+  .anime-card {
+    font-size: 0.9rem;
+  }
+
+  .anime-info {
+    padding: 0.75rem;
+  }
+
+  .favorite-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}
+

@@ -1,0 +1,87 @@
+.home {
+  padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-form {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  transition: box-shadow 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4fc3f7;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4fc3f7;
+  color: #000;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: #03a9f4;
+  color: #fff;
+}
+
+/* Grid layout for anime cards */
+.animes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loading,
+.error-message {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.error-message {
+  color: #ff5e57;
+}
+
+@media (max-width: 639px) {
+  .home {
+    padding: 1rem 0;
+  }
+
+  .search-form {
+    margin-bottom: 1rem;
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
